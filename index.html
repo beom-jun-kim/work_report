@@ -1,11 +1,165 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      img {
+        max-width: 100%;
+      }
+      ul {
+        list-style: none;
+      }
+      .multiple-items .slick-prev,
+      .multiple-items .slick-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        font-size: 0;
+        width: 50px;
+        height: 50px;
+        border: 3px solid;
+        cursor: pointer;
+        background: #fff;
+        /* border-radius: 50%; */
+      }
+      .multiple-items .slick-prev {
+        /* padding: 2px 2px 0 0; */
+        left: 20px;
+      }
+      .multiple-items .slick-next {
+        right: 20px;
+        /* padding: 1px 0 0 2px; */
+      }
+      .multiple-items .slick-prev:after,
+      .multiple-items .slick-next:after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: #000;
+        font-size: 1.5rem;
+      }
+      .multiple-items .slick-prev:after {
+        content: "←";
+        /* color: #fff; */
+      }
+      .multiple-items .slick-next:after {
+        content: "→";
+        /* color: #fff; */
+      }
+
+      /* dots */
+      .multiple-items .slick-dots {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        display: flex;
+        justify-content: center;
+        z-index: 100;
+      }
+      .multiple-items .slick-dots button {
+        cursor: pointer;
+        font-size: 0;
+        width: 30px;
+        height: 30px;
+        /* border-radius: 50%; */
+        margin-right: 0.5rem;
+        border: none;
+        background: #a1a1a1;
+      }
+      .multiple-items .slick-dots .slick-active button {
+        background: rgb(12, 12, 12);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="multiple-items">
+      <div>
+        <img src="./img/김범준_3월1주차_주간업무보고_page-0001.jpg" alt="" />
+      </div>
+      <div>
+        <img src="./img/김범준_3월1주차_주간업무보고_page-0002.jpg" alt="" />
+      </div>
+      <div>
+        <img src="./img/김범준_3월+2주차_주간업무보고_page-0001.jpg" alt="" />
+      </div>
+      <div>
+        <img src="./img/김범준_3월+2주차_주간업무보고_page-0002.jpg" alt="" />
+      </div>
+      <div>
+        <img src="./img/김범준_3월+3주차_주간업무보고_page-0001.jpg" alt="" />
+      </div>
+      <div>
+        <img src="./img/김범준_3월+3주차_주간업무보고_page-0002.jpg" alt="" />
+      </div>
+      <div>
+        <img src="./img/김범준_3월+4주차_주간업무보고_page-0001.jpg" alt="" />
+      </div>
+      <div>
+        <img src="./img/김범준_3월+4주차_주간업무보고_page-0002.jpg" alt="" />
+      </div>
+      <div>
+        <img src="./img/김범준_3월+4주차_주간업무보고_page-0003.jpg" alt="" />
+      </div>
+      <div>
+        <img src="./img/김범준_3월+5주차_주간업무보고_page-0001.jpg" alt="" />
+      </div>
+      <div>
+        <img src="./img/김범준_3월+5주차_주간업무보고_page-0002.jpg" alt="" />
+      </div>
+      <div>
+        <img src="./img/김범준_4월 1주차_주간업무보고_page-0001.jpg" alt="" />
+      </div>
+      <div>
+        <img src="./img/김범준_4월 1주차_주간업무보고_page-0002.jpg" alt="" />
+      </div>
+      <div>
+        <img src="./img/김범준_4월 2주차_주간업무보고_page-0001.jpg" alt="" />
+      </div>
+      <div>
+        <img src="./img/김범준_4월 2주차_주간업무보고_page-0002.jpg" alt="" />
+      </div>
+      <div>
+        <img src="./img/김범준_4월 3주차_주간업무보고_page-0001.jpg" alt="" />
+      </div>
+      <div>
+        <img src="./img/김범준_4월 3주차_주간업무보고_page-0002.jpg" alt="" />
+      </div>
+      <div>
+        <img src="./img/김범준_4월 4주차_주간업무보고_page-0001.jpg" alt="" />
+      </div>
+      <div>
+        <img src="./img/김범준_4월 4주차_주간업무보고_page-0002.jpg" alt="" />
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script>
+      $(".multiple-items").slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        dots: true,
+      });
+    </script>
+  </body>
 </html>
